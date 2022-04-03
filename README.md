@@ -1,4 +1,4 @@
-# Amazon Retail analysis
+# Amazon Retail analysis 
 Here I am going to analyze the amazon dataset and at the end give my views on it.
 
 ## Description
@@ -41,7 +41,7 @@ Here are some software dependencies for my project:
 - Nevigate your files properly in the notebook file.
 
 ### Author
-**Harsh Bhatt**
+Name :- **Harsh Bhatt**
 
 ### Version History
 - 0.1
@@ -51,6 +51,6 @@ Here are some software dependencies for my project:
 This project is licensed under the [Harsh Bhatt] License
 
 ### Acknowledgments
-Learning basic Python = <a href="https://www.w3schools.com">W3Schools</a><br>
-understand slaes analysis  = <a href="https://www.kaggle.com/code/zhonghanzhou/sales-analysis">Kaggle</a><br>
-Solving errors  = <a href="https://www.w3schools.com">Stackoverflow</a>
+- Learning basic Python = <a href="https://www.w3schools.com">W3Schools</a><br>
+- understand slaes analysis  = <a href="https://www.kaggle.com/code/zhonghanzhou/sales-analysis">Kaggle</a><br>
+- Solving errors  = <a href="https://www.w3schools.com">Stackoverflow</a>
