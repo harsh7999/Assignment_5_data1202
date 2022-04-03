@@ -6,13 +6,17 @@ In this code, I have done a visual, tabular, and quantitative analysis of the re
 
 ## Getting started 
 ### Dependencies
-Here are some software prerequisites for my project:
+Here are some software dependencies for my project:
 - Python
 - Anaconda 
 - Pandas 
 - Numpy
 - Seaborn
 - Matplotlib
+
+### Prerequisites
+- Learn basics of python 
+- Learn basic functiuons of libraries like pandas,matplotlib,seaborn etc.
 
 ### Installing
 - Python(3.9) :- https://www.python.org/downloads/release/python-390/
@@ -31,3 +35,7 @@ Here are some software prerequisites for my project:
 - Austin city needed maximum attention as there was a lowest revenue there, whereas San francisco has the highest revenue.
 - Number of products sold in each city helped amazon to decide the reorder quantity and the stock to be maintained.
 - Moreover, By analyzing peak hours, company can hire people accordingly and utilize human and other resources better.
+
+### Help
+- Make sure to install all dependencies.
+- Nevigate your files properly in the notebook file.
