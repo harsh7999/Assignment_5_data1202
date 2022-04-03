@@ -39,3 +39,10 @@ Here are some software dependencies for my project:
 ### Help
 - Make sure to install all dependencies.
 - Nevigate your files properly in the notebook file.
+
+### Author
+**Harsh Bhatt**
+
+### Version History
+- 0.1
+  - Initial Release
