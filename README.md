@@ -40,9 +40,56 @@ Here are some software dependencies for my project:
     file_path = []<br>
     for dirname, _, filenames in os.walk('archive'):<br>
         &nbsp&nbsp&nbsp&nbsp for filename in filenames:<br>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp file_path.append(os.path.join(dirname, filename))<br></p>
-4. 
-
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp file_path.append(os.path.join(dirname, filename))<br>
+    df = pd.DataFrame()<br>
+    for file in file_path:<br>
+    &nbsp&nbsp&nbsp&nbsp temp = pd.read_csv(file)<br>
+    &nbsp&nbsp&nbsp&nbsp df = pd.concat([df, temp], axis = 0, ignore_index = True)</p>
+3. **For Data cleaning remove missing values**:<br>
+      <p>df = df.dropna(how='all', inplace=False)<br>
+      df.drop(df.loc[df['Order ID'] =='Order ID'].index.tolist(), axis=0,inplace=True)<br>
+      df.info()<br>
+      df<br></p>
+4. **Data pre processing**:<br>
+      <p>df['Quantity Ordered'] = pd.to_numeric(df['Quantity Ordered']).astype(int)<br>
+      df['Price Each'] = pd.to_numeric(df['Price Each']).astype(float)<br>
+      df['Order Date'] = pd.to_datetime(df['Order Date'])<br>
+      df['Revenue'] = df['Quantity Ordered'] * df['Price Each']<br>
+      df['Month'] = df['Order Date'].dt.month<br>
+      df['Hour'] = df['Order Date'].dt.hour<br>
+      #Using lambda to take out the middle part of Purchase Address, store in new column as City<br>
+      df['City'] = df['Purchase Address'].apply(lambda x: x.split(',')[1])<br>
+      df.head()<br></p>
+5. **Getting Insights from data**:<br>
+      <p>monthly_revenue = df.groupby('Month').sum()<br>
+      monthly_revenue<br>
+      year_revenue = monthly_revenue['Revenue'].sum()<br>
+      year_revenue<br></p>
+6. **Visual representation of monthly revenue in 2019**:<br>
+      <p>plt.figure(figsize = (24, 6))<br>
+      sns.barplot(x = monthly_revenue.index, y = monthly_revenue['Revenue'], data = monthly_revenue, palette = 'muted')<br>
+      plt.title('Monthly Revenue in 2019', fontname = 'cursive', weight = 'bold')<br>
+      # x-label<br>
+      plt.xlabel('Months', weight = 'bold')<br>
+      # y-label<br>
+      plt.ylabel('Revenue(USD)', weight = 'bold');<br></p>
+7. **Cities and their sales**:<br>
+      <p>plt.figure(figsize = (24, 6))<br>
+      sns.barplot(x = city_sales.index, y = city_sales['Revenue'], data = city_sales, palette = 'muted')<br>
+      plt.title('Sales in each cities', fontname = 'cursive', weight = 'bold')<br>
+      #x-label<br>
+      plt.xlabel('City', weight = 'bold')<br>
+      #y-label<br>
+      plt.ylabel('Sales(USD)', weight = 'bold');<br></p>
+8. **Peak hours of the day**:
+      <p>plt.figure(figsize=(24, 4))<br>
+      plt.plot(hourly_sales.index, hourly_sales['Quantity Ordered'])<br>
+      plt.grid(True)<br>
+      plt.title('Hourly Sales', fontname='cursive', weight='bold')<br>
+      #x-label<br>
+      plt.xlabel('Hour')<br>
+      #y-label<br>
+      plt.ylabel('Number of Orders');<br></p>
 ### Insights drawn from Analysis
 - Decembeer month witnessed highest sales(4613443.34) and subseqently january month had the lowest sales(1822256.73).
 - Austin city needed maximum attention as there was a lowest revenue there, whereas San francisco has the highest revenue.
