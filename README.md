@@ -46,3 +46,11 @@ Here are some software dependencies for my project:
 ### Version History
 - 0.1
   - Initial Release
+
+### License
+This project is licensed under the [Harsh Bhatt] License
+
+### Acknowledgments
+Learning Python = <a href="https://www.w3schools.com">W3Schools</a><br>
+slaes analysis  = <a href="https://www.kaggle.com/code/zhonghanzhou/sales-analysis">Kaggle</a><br>
+Solving errors  = <a href="https://www.w3schools.com">Stackoverflow</a>
