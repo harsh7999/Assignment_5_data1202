@@ -23,7 +23,7 @@ Here are some software prerequisites for my project:
 - matplotlib :- https://matplotlib.org/stable/users/installing/index.html
 
 
-### executing program
+### Executing program
 
 
 ### Insights drawn from Analysis
