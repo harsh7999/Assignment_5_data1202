@@ -90,6 +90,18 @@ Here are some software dependencies for my project:
       plt.xlabel('Hour')<br>
       #y-label<br>
       plt.ylabel('Number of Orders');<br></p>
+      
+9. **Products Sold**
+      <p>plt.figure(figsize = (24, 6))<br>
+      sns.barplot(x = products.index, y = products['Quantity Ordered'], data = products, palette = 'muted')<br>
+      plt.title('Products sold in numbers', fontname = 'cursive', weight = 'bold')<br>
+      #x-label<br>
+      plt.xlabel('Product', weight = 'bold')<br>
+      degrees = 60<br>
+      plt.xticks(rotation = degrees)<br>
+      #y-label<br>
+      plt.ylabel('Quantity', weight = 'bold');<br></p>
+
 ### Insights drawn from Analysis
 - Decembeer month witnessed highest sales(4613443.34) and subseqently january month had the lowest sales(1822256.73).
 - Austin city needed maximum attention as there was a lowest revenue there, whereas San francisco has the highest revenue.
