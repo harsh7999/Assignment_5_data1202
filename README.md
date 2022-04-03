@@ -28,7 +28,20 @@ Here are some software dependencies for my project:
 
 
 ### Executing program
-
+1. **Load required libraries** as below:<br>
+   <p>import numpy as np <br>
+   import pandas as pd <br>
+   import seaborn as sns <br>
+   import matplotlib.pyplot as plt <br>
+   %matplotlib inline<br></p>
+   
+2. **Load the the file and append all files**:<br>
+    <p>import os<br>
+    file_path = []<br>
+    for dirname, _, filenames in os.walk('archive'):<br>
+        &nbsp&nbsp&nbsp&nbsp for filename in filenames:<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp file_path.append(os.path.join(dirname, filename))<br></p>
+4. 
 
 ### Insights drawn from Analysis
 - Decembeer month witnessed highest sales(4613443.34) and subseqently january month had the lowest sales(1822256.73).
@@ -54,3 +67,4 @@ This project is licensed under the [Harsh Bhatt] License
 - Learning basic Python = <a href="https://www.w3schools.com">W3Schools</a><br>
 - understand slaes analysis  = <a href="https://www.kaggle.com/code/zhonghanzhou/sales-analysis">Kaggle</a><br>
 - Solving errors  = <a href="https://www.w3schools.com">Stackoverflow</a>
+- - - -
